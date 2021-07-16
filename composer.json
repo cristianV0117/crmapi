@@ -1,0 +1,20 @@
+{
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/App/",
+            "Config\\": "app/Config/",
+            "Core\\": "app/Core/",
+            "Middlewares\\": "app/Middlewares/",
+            "Exceptions\\": "app/Exceptions/"
+        }
+    },
+    "require": {
+        "slim/slim": "3.*",
+        "illuminate/database": "^8.29",
+        "vlucas/phpdotenv": "^5.3",
+        "respect/validation": "^2.2",
+        "doctrine/dbal": "^3.0",
+        "nesbot/carbon": "^2.46",
+        "phpmailer/phpmailer": "^6.4"
+    }
+}

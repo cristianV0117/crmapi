@@ -1,0 +1,18 @@
+RewriteEngine on
+# URL AMIGABLE
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^([a-zA-Z0-9/_-]+)$ app/index.php
+# URL AMIGABLE
+Options -Indexes
+<Files .env>
+order allow,deny
+deny from all
+</Files>
+
+<IfModule mod_headers.c>
+    Header add Access-Control-Allow-Origin https://localhost:44357
+	Header add Access-Control-Allow-Headers "origin, x-requested-with, content-type, authorization, user "
+	Header add Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS, PATCH"
+	Header add Access-Control-Allow-Credentials true
+</IfModule>
